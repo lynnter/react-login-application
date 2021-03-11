@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Landing from './Landing';
 import axios from 'axios';
+import Header from './Header';
+import RegForm from './RegForm';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 class App extends Component {
   constructor(){
@@ -17,6 +23,7 @@ class App extends Component {
     this.changePassword = this.changePassword.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
   }
+
 
 changeFullName(e) {
   this.setState({
@@ -37,6 +44,12 @@ changeEmail(e) {
 }
 
 changePassword(e) {
+  this.setState({
+    password: e.target.value
+  })
+}
+
+changePassword2(e) {
   this.setState({
     password: e.target.value
   })
@@ -64,39 +77,21 @@ onSubmit(e) {
 }
 
   render() {
-    return (<div>
-<div className="container">
-  <div className="form-div">
-    <form onSubmit={this.onSubmit}>
-      <input type="text" placeholder="Full Name"
-      onChange={this.changeFullName}
-      value={this.state.fullName}
-      className="form-control form-group"
-       />
+    return (
+    <Router>
+    <div className="main">
+      <Header />
+      <RegForm />
 
-<input type="text" placeholder="Username"
-      onChange={this.changeUsername}
-      value={this.state.username}
-      className="form-control form-group"
-       />
+        <Switch>
+          <Route path="/landing">
+            <Landing />
+          </Route>
+        </Switch>
 
-<input type="text" placeholder="E-mail"
-      onChange={this.changeEmail}
-      value={this.state.email}
-      className="form-control form-group"
-       />
 
-<input type="password" placeholder="Password"
-      onChange={this.changePassword}
-      value={this.state.password}
-      className="form-control form-group"
-       />
-
-       <input type="submit" className="btn btn-danger btn-block" value="Submit" />
-    </form>
-  </div>
-</div>
-    </div>)
+    </div>
+    </Router>)
   }
 
 }
