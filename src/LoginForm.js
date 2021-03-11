@@ -3,29 +3,19 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 
 
-
 export class RegForm extends Component {
     constructor(){
         super()
         this.state = {
-          fullName: '',
           username: '',
-          email: '',
-          password: ''
+          password: '',
         }
-        this.changeFullName = this.changeFullName.bind(this)
         this.changeUsername = this.changeUsername.bind(this)
-        this.changeEmail = this.changeEmail.bind(this)
         this.changePassword = this.changePassword.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
       }
     
-    
-    changeFullName(e) {
-      this.setState({
-        fullName: e.target.value
-      })
-    }
+
     
     changeUsername(e) {
       this.setState({
@@ -33,11 +23,6 @@ export class RegForm extends Component {
       })
     }
     
-    changeEmail(e) {
-      this.setState({
-        email: e.target.value
-      })
-    }
     
     changePassword(e) {
       this.setState({
@@ -45,19 +30,12 @@ export class RegForm extends Component {
       })
     }
     
-    changePassword2(e) {
-      this.setState({
-        password: e.target.value
-      })
-    }
     
     onSubmit(e) {
       e.preventDefault()
     
       const registered = {
-        fullName: this.state.fullName,
         username: this.state.username,
-        email: this.state.email,
         password:this.state.password,
       }
     
@@ -76,14 +54,9 @@ export class RegForm extends Component {
         return (
             <div>
     <div className="form-container">
-    <h1>Create an Account</h1> 
+    <h1>Sign In</h1>
         <div className="form-div">
             <form onSubmit={this.onSubmit}>
-            <input type="text" placeholder="Full Name"
-            onChange={this.changeFullName}
-            value={this.state.fullName}
-            className="form-control form-group"
-            />
 
         <input type="text" placeholder="Username"
             onChange={this.changeUsername}
@@ -91,11 +64,6 @@ export class RegForm extends Component {
             className="form-control form-group"
             />
 
-        <input type="text" placeholder="E-mail"
-            onChange={this.changeEmail}
-            value={this.state.email}
-            className="form-control form-group"
-            />
 
         <input type="password" placeholder="Password"
             onChange={this.changePassword}
@@ -106,7 +74,7 @@ export class RegForm extends Component {
             <input type="submit" className="btn btn-danger btn-block" value="Register" />
             
             <span className="form-input-login">
-            Already have an account? Login <Link to="/login">here</Link>
+            Don't have an account? Register <Link to="/registration">here</Link>
             </span>
             </form>
         </div>
