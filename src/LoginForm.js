@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 
 
-export class RegForm extends Component {
+export class LoginForm extends Component {
     constructor(){
         super()
         this.state = {
@@ -85,4 +85,4 @@ export class RegForm extends Component {
     }
 }
 
-export default RegForm
+export default LoginForm
