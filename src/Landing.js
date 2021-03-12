@@ -1,3 +1,4 @@
+// this page is private
 import React from 'react'
 
 const Landing = () => {
