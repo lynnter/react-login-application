@@ -44,11 +44,6 @@ export class RegForm extends Component {
       })
     }
     
-    changePassword2(e) {
-      this.setState({
-        password: e.target.value
-      })
-    }
     
     onSubmit(e) {
       e.preventDefault()
@@ -73,8 +68,9 @@ export class RegForm extends Component {
 
     render() {
         return (
-            <div>
+    <div>
     <div className="form-container"> 
+    <h1>Create an Account</h1>
         <div className="form-div">
             <form onSubmit={this.onSubmit}>
             <input type="text" placeholder="Full Name"

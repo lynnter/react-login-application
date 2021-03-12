@@ -1,0 +1,41 @@
+[33mcommit 791245dcc9d2a814fac042bae18c366beaf949db[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Lynn Tang <tanglynn2@gmail.com>
+Date:   Thu Mar 11 19:46:55 2021 -0600
+
+    protected pages
+
+[33mcommit 428423d2c3f9f00e4271d13516a582ecaa5d4d89[m
+Author: Lynn Tang <tanglynn2@gmail.com>
+Date:   Thu Mar 11 17:15:26 2021 -0600
+
+    routes to registration and login form
+
+[33mcommit 5b012f51880ef1331c0464329f413b005a438fcb[m
+Author: Lynn Tang <tanglynn2@gmail.com>
+Date:   Thu Mar 11 15:47:18 2021 -0600
+
+    routing to registration form
+
+[33mcommit 241c55f994d20c2f40742af54b463a29b6f271e4[m
+Author: Lynn Tang <tanglynn2@gmail.com>
+Date:   Wed Mar 10 19:07:10 2021 -0600
+
+    hashed password
+
+[33mcommit c61b35ab2d3576ddf45e3f2f30515543b8849b56[m
+Author: Lynn Tang <tanglynn2@gmail.com>
+Date:   Wed Mar 10 18:46:15 2021 -0600
+
+    sign up sheet for front end built
+
+[33mcommit 8c432d956059cd32447568782b886baffa35dbbe[m
+Author: Lynn Tang <tanglynn2@gmail.com>
+Date:   Wed Mar 10 17:39:34 2021 -0600
+
+    successfully added user to database
+
+[33mcommit 165568270491aa0b4c11414c695d9e67bc6120a6[m
+Author: Lynn Tang <tanglynn2@gmail.com>
+Date:   Wed Mar 10 15:18:38 2021 -0600
+
+    Initialize project using Create React App
